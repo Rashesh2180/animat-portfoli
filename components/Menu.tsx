@@ -102,7 +102,7 @@ const MenuItem = ({ item, index, onClose }: { item: string; index: number; onClo
 }
 
 const Menu = ({ isOpen, onClose }: MenuProps) => {
-  const menuItems = ['Home', 'About', 'Skills', 'Tools', 'Projects', 'Experience']
+  const menuItems = ['Home', 'Skills', 'Tools', 'Experience', 'Projects', 'Development', 'Contact']
 
   return (
     <AnimatePresence mode="wait">

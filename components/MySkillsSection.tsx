@@ -4,29 +4,17 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const mySkills = [
-  { 
+  {
     id: 1,
-    title: "UX/UI Design", 
-    description: "Creating intuitive, user-centric interfaces with a focus on seamless interactions and modern aesthetics.",
-    icon: "🎨" 
+    title: "Web Design",
+    description: "I have skill with design html,css,tailwind,material ui,framer moion.",
+    icon: "🎨"
   },
-  { 
+  {
     id: 2,
-    title: "Frontend Engineering", 
+    title: "Frontend Engineering",
     description: "Building responsive, highly-animated web applications utilizing React, Next.js, and Framer Motion.",
-    icon: "💻" 
-  },
-  { 
-    id: 3,
-    title: "Backend Architecture", 
-    description: "Designing robust APIs, scalable database structures, and secure server environments.",
-    icon: "⚙️" 
-  },
-  { 
-    id: 4,
-    title: "Brand Identity", 
-    description: "Crafting memorable visual identities algorithms and cohesive design systems for digital products.",
-    icon: "✨" 
+    icon: "💻"
   }
 ]
 
@@ -42,8 +30,8 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { type: "spring", stiffness: 100, damping: 15 }
   }
@@ -53,8 +41,8 @@ export default function MySkillsSection() {
   return (
     <section id="skills" className="bg-gray-950 py-32 px-6 md:px-12 lg:px-24 border-t border-white/5 relative z-10">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -67,7 +55,7 @@ export default function MySkillsSection() {
           </h2>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -75,7 +63,7 @@ export default function MySkillsSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
         >
           {mySkills.map((skill) => (
-            <motion.div 
+            <motion.div
               key={skill.id}
               variants={cardVariants}
               className="bg-[#111111] p-10 md:p-12 rounded-[2rem] border border-white/5 hover:border-neon-yellow/30 transition-colors duration-500 group flex flex-col h-full"

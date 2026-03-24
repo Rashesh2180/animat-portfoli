@@ -40,22 +40,22 @@ const MarqueeSection = () => {
             {/* First Block */}
             <div className="flex items-center">
               <span className="text-5xl md:text-7xl lg:text-9xl font-black text-white/20 px-8 flex items-center gap-8">
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Branding 
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Development
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Development 
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Design
               </span>
             </div>
             {/* Second Block (Duplicate) */}
             <div className="flex items-center">
                <span className="text-5xl md:text-7xl lg:text-9xl font-black text-white/20 px-8 flex items-center gap-8">
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Branding 
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Development
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Development 
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Design
               </span>
             </div>
             {/* Third Block (Duplicate for safety) */}
              <div className="flex items-center">
                <span className="text-5xl md:text-7xl lg:text-9xl font-black text-white/20 px-8 flex items-center gap-8">
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Branding 
-                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Development
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Development 
+                <span className="text-4xl md:text-6xl lg:text-8xl">✦</span> Web Design
               </span>
             </div>
           </motion.div>

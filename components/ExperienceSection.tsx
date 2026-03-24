@@ -6,30 +6,30 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 const experiences = [
   {
     id: 1,
-    role: "Lead Frontend Engineer",
-    company: "Neon Tech",
-    date: "2023 — Present",
-    description: "Spearheading the development of high-performance web applications using modern React and Next.js ecosystems. Managing a team of 4 engineers and establishing frontend architecture standards."
+    role: "Frontend developer",
+    company: "OliX Lab",
+    date: "2025 — Present",
+    description: ""
   },
   {
     id: 2,
-    role: "Senior UI/UX Designer",
-    company: "Creative Digital",
-    date: "2020 — 2023",
-    description: "Designed award-winning user interfaces and interactive prototypes for global brands. Bridged the gap between design and development by writing robust CSS and interactive JavaScript."
+    role: "Frontend developer",
+    company: "Sacesta Technology",
+    date: "2024-2025",
+    description: "I work with web design and developement with reusable components and best practices of code with react js and next js."
   },
   {
     id: 3,
-    role: "Web Developer",
-    company: "StartUp Inc.",
-    date: "2018 — 2020",
-    description: "Developed and maintained multiple full-stack MVPs, focusing on seamless user experiences and fast load times. Implemented complex animations and data visualizations."
+    role: "Web Designer",
+    company: "Sacesta Technology",
+    date: "2023 — 2024",
+    description: "I started my journey as a web designer, i work with responsive design with common class practice,pixel perfect design and animation and i also workwith 3d design."
   }
 ]
 
 export default function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null)
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -41,8 +41,8 @@ export default function ExperienceSection() {
   return (
     <section id="experience" ref={containerRef} className="bg-[#EAEAEA] dark:bg-gray-950 py-32 px-6 md:px-12 lg:px-24 transition-colors duration-300">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
-        
-        <motion.h2 
+
+        <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
 
         <div className="relative w-full">
           {/* Animated Timeline Line */}
-          <motion.div 
+          <motion.div
             style={{ scaleY: lineScaleY, transformOrigin: 'top' }}
             className="absolute left-[23px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-neon-yellow via-neon-lime to-transparent"
           />
@@ -63,7 +63,7 @@ export default function ExperienceSection() {
             {experiences.map((exp, index) => {
               const isEven = index % 2 === 0
               return (
-                <motion.div 
+                <motion.div
                   key={exp.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function ExperienceSection() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className={`relative flex flex-col md:flex-row items-center justify-between w-full group ${isEven ? 'md:flex-row-reverse' : ''}`}
                 >
-                  
+
                   {/* Timeline Dot */}
                   <div className="absolute left-[16px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-white dark:bg-gray-950 border-2 border-neon-yellow z-10 group-hover:bg-neon-yellow transition-colors duration-300" />
 
@@ -83,7 +83,7 @@ export default function ExperienceSection() {
                     <div className="bg-white dark:bg-[#111111] shadow-sm dark:shadow-none border border-black/5 dark:border-white/5 rounded-3xl p-8 hover:border-black/20 dark:hover:border-white/20 transition-colors duration-500 relative overflow-hidden">
                       {/* Subtle hover glow effect */}
                       <div className="absolute inset-0 bg-neon-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      
+
                       <div className="relative z-10">
                         <span className="inline-block px-4 py-1 rounded-full bg-black/5 dark:bg-white/5 text-neon-yellow text-sm font-semibold mb-4">
                           {exp.date}
